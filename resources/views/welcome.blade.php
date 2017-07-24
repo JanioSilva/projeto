@@ -68,7 +68,7 @@
           <hr class="item-divider">
           <p>Universidade Federal de Alagoas</p>
           <hr class="item-divider">
-          <p><a class="btn btn-secondary" href="/espelho-grupo" role="button">Ver Detalhes &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="{{ url('/espelho') }}" role="button">Ver Detalhes &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
@@ -78,7 +78,7 @@
           <hr class="item-divider">
           <p>Universidade Federal de Alagoas</p>
           <hr class="item-divider">
-          <p><a class="btn btn-secondary" href="/espelho-grupo" role="button">Ver Detalhes &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="{{ url('/espelho') }}" role="button">Ver Detalhes &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
@@ -88,7 +88,7 @@
           <hr class="item-divider">
           <p>Universidade Federal de Alagoas</p>
           <hr class="item-divider">
-          <p><a class="btn btn-secondary" href="/espelho-grupo" role="button">Ver Detalhes &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="{{ url('/espelho') }}" role="button">Ver Detalhes &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
 
         <!--Link Ver Mais Grupos  -->
