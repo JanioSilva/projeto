@@ -24,6 +24,10 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/projeto', function () {
+    return view('projeto.dashboard');
+});
+
 Route::get('/grupos', function () {
     return view('grupo.grupos');
 })->name('grupos');
