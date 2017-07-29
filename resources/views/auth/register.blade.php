@@ -2,12 +2,11 @@
 
 @section('content') 
   
-  
-
-
-      <hr class="featurette-divider">
+      
       
 <div class="container">
+
+<hr class="featurette-divider">
       <!-- Inicio Contato -->
       <div class="row">
 
@@ -17,26 +16,74 @@
         </div>
         
             <div class="col-lg-6">
-              <form class="">
-      
-                <input class="form-control form-group" placeholder="Nome" type="text" name="nome" value="">
-            
-                <input class="form-control form-group" placeholder="E-mail" type="text" name="email" value="">
-                
-                <select name="instituicao" id="" class="form-control form-group" placeholder="Instituição" >
-                  <option value="">Universidade Federal de Alagoas</option>
-                
-                </select>
+              <form class="" method="POST" action="{{ route('register') }}">
+                        {{ csrf_field() }}
 
-                <input class="form-control form-group" placeholder="Senha" type="password" name="senha" value="">
-                <button class="form-control btn btn-primary " type="submit">Enviar</button>
-                
-              </form>
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            
+
+                            <div class="">
+                                <input placeholder="Nome" id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            
+                            <div class="">
+                                <input placeholder="E-mail" id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            
+
+                            <div class="">
+                                <input placeholder="Senha" id="password" type="password" class="form-control" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <div class="">
+                                <input placeholder="Confirme a Senha" id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="">
+                                <button type="submit" class="btn btn-primary">
+                                    Registrar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
             </div>
           
       </div>
+
+      <hr class="featurette-divider">
 </div>
       <!--Fim Contato  -->
-      <hr class="featurette-divider">
+      
 
 @endsection
+

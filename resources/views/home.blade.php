@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <hr class="featurette-divider">
+  
 
-    <div class="container marketing">
+    <div class="container marketing mt-5">
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
