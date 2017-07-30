@@ -10,19 +10,21 @@
       <div class="row">
         <div class="col-lg-4">
           <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2 >GRUPO</h2>
-          <h4>Grupo de Pesquisa</h4>
-          <p>Pensando mais a longo prazo, a mobilidade dos capitais internacionais representa uma abertura para a melhoria dos conhecimentos estratégicos para atingir a excelência.</p>
+          <h2 >{{$grupo->sigla}}</h2>
+          
+          <p>{{$grupo->descricao}}</p>
           <hr class="item-divider">
           <p>Universidade Federal de Alagoas</p>
           <hr class="item-divider">
           
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-8">
-          <h2>Grupo de Pesquisa em Engenharia de Produção</h2>
+          <h2>{{$grupo->nome}}</h2>
           <hr class="item-divider">
-          <strong>Área de Pesquisa:</strong> <p>Engenharia do Conhecimento</p>
-          <strong>Ano de Formação:</strong> <p>2016</p>
+          <strong>Área de Pesquisa:</strong> 
+          <p>{{$grupo->area}}</p>
+          <strong>Ano de Formação:</strong> 
+          <p>{{$grupo->data_formacao}}</p>
           <strong>Lideres do Grupo:</strong> <p>Jânio Alves da Silva</p>
           <strong>Área Predominante:</strong> <p>Engenharia de Produção</p>
         </div>

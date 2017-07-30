@@ -5,9 +5,10 @@
     
 
     <div class="container marketing mt-5">
-
+    
       <!-- Three columns of text below the carousel -->
-      <form action="">
+      <form action="{{ url('/grupos/create') }}" method="post" >
+        {{ csrf_field() }}
             
             <div class="row">
               <div class="col-lg-4">
@@ -23,21 +24,35 @@
                 </div>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-8">
-              
+                  @if(session('success'))
+                     <p class="alert-success"> {{session('success')}} </p>
+                  @endif
+
               
               <input name="nome" class="form-control" type="text" placeholder="Nome do Grupo">
               
               <hr class="item-divider">
-              <strong>Área de Pesquisa:</strong>
-              <input name="area" type="text" class="form-control">
-              <strong>Ano de Formação:</strong>
-              <input type="number" min="1970" step="1" class="form-control" placeholder="1970">
-              <strong>Área Predominante:</strong>
-              <input name="area" type="text" class="form-control">
-            
-              <div class="mt-5">
-                <input class="btn btn-primary" type="submit" value="Salvar">
-              </div>
+              
+                <div class="form-group">
+                  <strong>Área de Pesquisa:</strong>
+                  <input name="area" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <strong>Instituição:</strong>
+                  <input name="instituicao" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <strong>Unidade:</strong>
+                  <input name="unidade" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                 <strong>Ano de Formação:</strong>
+                  <input name="data_formacao" type="text "class="form-control" placeholder="1970">
+                </div>
+                <div class="mt-5">
+                  <input class="btn btn-primary" type="submit" value="Salvar">
+                </div>
+
             </div>
             
         </form>

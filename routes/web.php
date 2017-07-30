@@ -21,10 +21,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/pesquisadores', 'UserController@index')->name('pesquisadores');
 
-// Home teste
-// Route::get('/home', function () {
-//     return view('home');
-// });
+
 
 Route::get('/projeto', function () {
     return view('projeto.dashboard');
@@ -34,6 +31,7 @@ Route::get('/projeto', function () {
 
 Route::get('/grupos', 'GrupoController@index')->name('grupos');
 Route::get('/grupos/create', 'GrupoController@create')->name('create_grupo');
+Route::post('/grupos/create', 'GrupoController@store')->name('create_grupo');
 
-Route::get('/espelho', 'GrupoController@show');
+Route::get('/espelho/{id}', 'GrupoController@show');
 

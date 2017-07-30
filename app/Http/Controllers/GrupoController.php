@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use App\Grupo;
 
 class GrupoController extends Controller
 {
@@ -13,7 +15,9 @@ class GrupoController extends Controller
      */
     public function index()
     {
-        return view('grupo.grupos');
+        $grupos = Grupo::all();
+
+        return view('grupo.grupos')->with('grupos', $grupos);
     }
 
     /**
@@ -34,7 +38,11 @@ class GrupoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        Grupo::create($data);
+
+        return back()->with(['success' => 'Grupo Cadastrado com sucesso!']);
     }
 
     /**
@@ -44,10 +52,11 @@ class GrupoController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    //para pegar o espelho especifico Modificar para  ->  public function show($id)
-    public function show()  
+    public function show($id)  
     {
-        return view('grupo.espelho');
+        $grupo = Grupo::find($id);
+
+        return view('grupo.espelho')->with('grupo', $grupo);;
     }
 
     /**
