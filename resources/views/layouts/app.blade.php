@@ -19,9 +19,14 @@
       <a class="navbar-brand" href="{{ url('/') }}">G-Group</a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
+        @if(@Auth::check())
           <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ url('/home') }}">Home <span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/pesquisadores') }}">Pesquisadores</a>
+          </li>
+        @endif
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/grupos') }}">Grupos</a>
           </li>
@@ -30,15 +35,42 @@
           </li>
           
         </ul>
+        
         <ul class="navbar-nav mr-auto navbar-toggler-right">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/login') }}">Login</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/register') }}">Registro</a>
-          </li>
-          
-        </ul>
+        
+            @if(Auth::guest())
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{ url('/register') }}">Registro</a>
+                </li>
+         
+            @else
+        
+                  <li class="dropdown nav-item">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                  {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                      
+                    <ul class="dropdown-menu" role="menu">
+                       <li>
+                         <a class="dropdown-item" style=" color: rgba(0, 0, 0, 0.5);" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                                     Logout
+                             </a>
+
+                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                         {{ csrf_field() }}
+                       </form>
+                      </li>
+                  </li>
+                
+                </ul>
+            @endif   
+         </ul>
+        
         <!-- busca
         <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">

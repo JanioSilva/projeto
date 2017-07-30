@@ -2,9 +2,6 @@
 
 @section('content')
 
-
-   
-
     <div class="container marketing mt-5">
 
       <!-- Three columns of text below the carousel -->

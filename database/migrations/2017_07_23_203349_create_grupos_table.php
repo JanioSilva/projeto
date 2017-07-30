@@ -16,7 +16,10 @@ class CreateGruposTable extends Migration
         Schema::create('grupos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
+            $table->string('sigla');
+            $table->string('avatar')->default('default.jpg');
             $table->text('descricao');
+            $table->text('area');
             $table->string('instituicao');
             $table->string('unidade');
             $table->integer('data_formacao');

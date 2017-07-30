@@ -75,6 +75,9 @@ body {
   margin: 1rem 0; /* Space out the Bootstrap <hr> more */
 }
 
+.mt-8 {
+  margin-top: 5rem !important;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

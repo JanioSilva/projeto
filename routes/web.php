@@ -18,20 +18,22 @@ Route::get('/', function () {
 Auth::routes();
 
 //Home após o login 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/pesquisadores', 'UserController@index')->name('pesquisadores');
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Home teste
+// Route::get('/home', function () {
+//     return view('home');
+// });
 
 Route::get('/projeto', function () {
     return view('projeto.dashboard');
 });
 
-Route::get('/grupos', function () {
-    return view('grupo.grupos');
-})->name('grupos');
 
-Route::get('/espelho', function () {
-    return view('grupo.espelho');
-});
+
+Route::get('/grupos', 'GrupoController@index')->name('grupos');
+Route::get('/grupos/create', 'GrupoController@create')->name('create_grupo');
+
+Route::get('/espelho', 'GrupoController@show');
+
