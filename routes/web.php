@@ -19,6 +19,11 @@ Auth::routes();
 
 //Home após o login 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Acessando o perfil de um usuário
+Route::get('/perfil/{id}','UserController@show')->name('pesquisador');
+
+// Editar Perfil do usuário
 Route::get('/perfil','UserController@perfil')->name('perfil');
 Route::post('/perfil','UserController@update_avatar')->name('perfil');
 

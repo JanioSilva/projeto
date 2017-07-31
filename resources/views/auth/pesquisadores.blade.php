@@ -14,7 +14,7 @@
             <hr class="item-divider">
             <p>Universidade Federal de Alagoas</p>
             <hr class="item-divider">
-            <p><a class="btn btn-secondary" href="/espelho-grupo" role="button">Ver Detalhes &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="/perfil/{{$user->id}}" role="button">Ver Detalhes &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
         @endforeach
       
