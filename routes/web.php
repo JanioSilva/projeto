@@ -19,6 +19,10 @@ Auth::routes();
 
 //Home após o login 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/perfil','UserController@perfil')->name('perfil');
+Route::post('/perfil','UserController@update_avatar')->name('perfil');
+
+
 Route::get('/pesquisadores', 'UserController@index')->name('pesquisadores');
 
 

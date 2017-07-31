@@ -50,10 +50,14 @@
         
                   <li class="dropdown nav-item">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <img class="rounded-circle mr-2" src="/img/{{Auth::user()->avatar}}" alt="User Image" width="32" height="32">
                                   {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                       
                     <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a class="dropdown-item" style=" color: rgba(0, 0, 0, 0.5);" href="{{ url('/perfil')}}">Perfil</a>
+                        </li>
                        <li>
                          <a class="dropdown-item" style=" color: rgba(0, 0, 0, 0.5);" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
@@ -61,13 +65,15 @@
                                      Logout
                              </a>
 
-                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                         {{ csrf_field() }}
-                       </form>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                          </form>
                       </li>
+                      
+                    </ul>
+                
                   </li>
                 
-                </ul>
             @endif   
          </ul>
         
