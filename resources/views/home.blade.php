@@ -47,9 +47,7 @@
       </div><!-- /.row -->
 
 
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
+     
 
      
 @endsection

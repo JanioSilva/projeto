@@ -88,6 +88,9 @@
  
 
  @yield('content')
+
+<hr class="featurette-divider">
+
 <div class="container">
      <!-- FOOTER -->
       <footer>

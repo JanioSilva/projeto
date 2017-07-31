@@ -34,7 +34,73 @@
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
+      <div class="container">
+
+<hr class="featurette-divider">
+      <!-- Inicio Contato -->
+      <div class="row">
+
+        <div class="col-lg-6 text-center">
+          <h1 class="mt-5">Entre em contato!</h1>
+          <h3>É importante questionar o quanto o consenso sobre a necessidade de qualificação.</h3>
+        </div>
+        
+            <div class="col-lg-6">
+              <form class="" method="POST" action="">
+                        {{ csrf_field() }}
+
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            
+
+                            <div class="">
+                                <input placeholder="Nome" id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            
+                            <div class="">
+                                <input placeholder="E-mail" id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                          <div>
+                              <textarea class="form-control" name="" id="" cols="1" rows="3"></textarea>
+                          
+                          </div>
+                        
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <div class="">
+                                <button type="submit" class="btn btn-primary">
+                                    Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+          
+      </div>
+
+      
+</div>
+      
+
 
      
 @endsection

@@ -72,8 +72,6 @@
             </div>
           
       </div>
-      <!--Fim Contato  -->
-    <hr class="featurette-divider">
 
   </div>
 

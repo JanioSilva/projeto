@@ -80,9 +80,8 @@
           
       </div>
 
-      <hr class="featurette-divider">
+      
 </div>
-      <!--Fim Contato  -->
       
 
 @endsection
