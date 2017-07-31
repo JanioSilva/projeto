@@ -16,6 +16,33 @@
           <hr class="item-divider">
           <p>Universidade Federal de Alagoas</p>
           <hr class="item-divider">
+
+            <div>
+            <nav class="nav flex-column">
+              <a class="nav-link active" data-toggle="collapse" href="#collapseGrupos" aria-expanded="false" aria-controls="collapseGrupos">Projetos do {{$grupo->sigla}}</a>
+               <div class="collapse" id="collapseGrupos">
+                  <div>
+                    <ul class="list-group">
+                      <li class="list-group-item">Projeto 1</li>
+                      <li class="list-group-item">Projeto 2</li>
+                      <li class="list-group-item">Projeto 3</li>
+                    </ul>
+                  </div>
+               </div>
+              <a class="nav-link active" data-toggle="collapse" href="#collapseProjetos" aria-expanded="false" aria-controls="collapseProjetos">Pesquisadores do Grupo</a>
+               <div class="collapse" id="collapseProjetos">
+                  <div>
+                    <ul class="list-group">
+                      <li class="list-group-item">Pesquisador 1</li>
+                      <li class="list-group-item">Pesquisador 2</li>
+                      <li class="list-group-item">Pesquisador 3</li>
+                    </ul>
+                  </div>
+               </div>
+            </nav>
+          </div>
+
+
           
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-8">
@@ -53,7 +80,7 @@
                             
 
                             <div class="">
-                                <input placeholder="Nome" id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input placeholder="Nome" id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -95,7 +122,7 @@
                     </form>
             </div>
           
-      </div>
+      </div> <!--  /Fim do Contato  -->
 
       
 </div>
