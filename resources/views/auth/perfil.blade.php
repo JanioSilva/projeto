@@ -9,7 +9,7 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="rounded-circle" src="/img/{{Auth::user()->avatar}}" alt="Generic placeholder image" width="140" height="140">
+          <img class="rounded-circle" src="/img/{{Auth::user()->avatar}}" alt="User Image" width="140" height="140">
           <form enctype="multipart/form-data" action="/perfil" method="post">
             <div class="form-group">
             <span class="btn btn-default btn-file">
