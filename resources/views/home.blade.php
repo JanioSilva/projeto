@@ -21,7 +21,7 @@
                   <div class="">
                     <ul class="list-group">
                       @foreach(Auth::user()->grupos as $grupo)
-                        <li class="list-group-item">{{$grupo->nome}}</li>
+                        <li class="list-group-item"><a class="nav-link" href="/espelho/{{$grupo->id}}">{{$grupo->nome}}</a></li>
                       @endforeach
                     </ul>
                   </div>

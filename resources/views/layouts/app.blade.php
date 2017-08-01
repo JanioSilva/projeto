@@ -9,6 +9,7 @@
         <!--Bootstrap  -->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ asset('/css/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/font-awesome/css/font-awesome.min.css') }}">
     </head>
     <body>
         
@@ -21,7 +22,7 @@
         <ul class="navbar-nav mr-auto">
         @if(@Auth::check())
           <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/home') }}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ url('/home') }}"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/pesquisadores') }}">Pesquisadores</a>
