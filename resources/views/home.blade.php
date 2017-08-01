@@ -21,7 +21,12 @@
                   <div class="">
                     <ul class="list-group">
                       @foreach(Auth::user()->grupos as $grupo)
-                        <li class="list-group-item"><a class="nav-link" href="/espelho/{{$grupo->id}}">{{$grupo->nome}}</a></li>
+                        <li class="list-group-item">
+                          <a class="nav-link" href="/espelho/{{$grupo->id}}">
+                              <img class="rounded-circle mr-2" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="32" height="32">
+                              {{$grupo->nome}}
+                          </a>
+                        </li>
                       @endforeach
                     </ul>
                   </div>
@@ -41,7 +46,10 @@
           
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-8">
-          
+          <div class="card card-block">
+              <h3><i class="fa fa-tablet" aria-hidden="true"></i>  Aqui ficará a timeline</h3>
+              <hr class="item-divider">
+          </div>
         </div>
         
       </div><!-- /.row -->
