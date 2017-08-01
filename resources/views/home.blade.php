@@ -18,11 +18,11 @@
             <nav class="nav flex-column">
               <a class="nav-link active" data-toggle="collapse" href="#collapseGrupos" aria-expanded="false" aria-controls="collapseGrupos">Meus Grupos</a>
                <div class="collapse" id="collapseGrupos">
-                  <div class="card card-block">
-                    <ul>
-                      <li>Grupo 1</li>
-                      <li>Grupo 2</li>
-                      <li>Grupo 3</li>
+                  <div class="">
+                    <ul class="list-group">
+                      @foreach(Auth::user()->grupos as $grupo)
+                        <li class="list-group-item">{{$grupo->nome}}</li>
+                      @endforeach
                     </ul>
                   </div>
                </div>

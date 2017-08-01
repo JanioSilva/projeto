@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Grupo;
+use Auth;
 
 class GrupoController extends Controller
 {
@@ -40,7 +41,13 @@ class GrupoController extends Controller
     {
         $data = $request->all();
 
-        Grupo::create($data);
+        $grupo = Grupo::create($data);
+
+        $user = Auth::user();
+
+        $grupo->users()->attach($user->id);
+
+          
 
         return back()->with(['success' => 'Grupo Cadastrado com sucesso!']);
     }

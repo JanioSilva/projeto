@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class Grupo extends Model
 {
@@ -23,4 +24,11 @@ class Grupo extends Model
     protected $hidden = [
       
     ];
+
+    public function users(){
+
+        return $this->belongsToMany(User::class);
+        
+    }
+
 }
