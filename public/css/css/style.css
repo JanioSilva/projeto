@@ -26,6 +26,9 @@ body {
   background-color: #777;
 
 }
+
+
+
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
