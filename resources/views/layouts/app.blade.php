@@ -8,8 +8,10 @@
 
         <!--Bootstrap  -->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ asset('/css/css/style.css') }}">
-        <link rel="stylesheet" href="{{ asset('/css/font-awesome/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/font-awesome/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/css/mdb.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/css/newstyle.css') }}">
     </head>
     <body>
         
@@ -106,6 +108,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="{{ asset('/css/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js') }}" ></script>
         <script src="{{ asset('/js/holder/holder.min.js')}}"></script>
+        <script src="{{ asset('/js/mdb.min.js')}}"></script>
+        <script src="{{ asset('/js/popper.min.js')}}"></script>
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     </body>
 </html>

@@ -47,7 +47,7 @@ Route::get('/espelho/{id}', 'GrupoController@show');
 // Rota para Notícias
 Route::get('noticias', function () {
     
-    return view('noticias.noticias');
+    return view('news.noticias');
 
 });
 
