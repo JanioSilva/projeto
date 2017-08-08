@@ -51,3 +51,4 @@ Route::get('noticias', function () {
 
 });
 
+

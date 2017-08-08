@@ -19,11 +19,11 @@
               <a class="nav-link active" data-toggle="collapse" href="#collapseGrupos" aria-expanded="false" aria-controls="collapseGrupos">Meus Grupos</a>
                <div class="collapse" id="collapseGrupos">
                   <div class="">
-                        <div class="mb-2 ml-5 mr-5">
-                         <a href="{{url('/grupos/create')}}" class="active list-group-item list-group-item-action flex-column align-items-start pr-5 pl-5">
-                                <div class="d-flex w-100 justify-content-between">
-                                <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
-                                  <span class="mb-1 pt-1">Novo Grupo</span>
+                        <div class="mb-2">
+                         <a href="{{url('/grupos/create')}}" class=" w-50 h-25 active list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex  justify-content-between">
+                                <i class="fa fa-plus fa-2x mr-1" aria-hidden="true"></i>
+                                  <span class="mt-1 ml-1">Novo Grupo</span>
                                   
                                 </div>
                             
