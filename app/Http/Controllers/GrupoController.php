@@ -16,7 +16,7 @@ class GrupoController extends Controller
      */
     public function index()
     {
-        $grupos = Grupo::all();
+        $grupos = Grupo::orderBy('created_at', 'cesc')->paginate(6);
 
         return view('grupo.grupos')->with('grupos', $grupos);
     }

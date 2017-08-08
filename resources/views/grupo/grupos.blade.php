@@ -18,7 +18,12 @@
           <p><a class="btn btn-secondary" href="/espelho/{{$grupo->id}}" role="button">Ver Detalhes &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
     @endforeach
-        
+
       </div><!-- /.row -->
+      <div class="row">
+        {{ $grupos->links() }}
+
+      
+      </div>
 
 @endsection

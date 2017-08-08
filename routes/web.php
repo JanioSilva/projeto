@@ -31,16 +31,23 @@ Route::post('/perfil','UserController@update_avatar')->name('perfil');
 Route::get('/pesquisadores', 'UserController@index')->name('pesquisadores');
 
 
-
+// Roda do Dashboad do projeto
 Route::get('/projeto', function () {
     return view('projeto.dashboard');
 });
 
 
-
+// Roda dos grupos CRUD
 Route::get('/grupos', 'GrupoController@index')->name('grupos');
 Route::get('/grupos/create', 'GrupoController@create')->name('create_grupo');
 Route::post('/grupos/create', 'GrupoController@store')->name('create_grupo');
 
 Route::get('/espelho/{id}', 'GrupoController@show');
+
+// Rota para Notícias
+Route::get('noticias', function () {
+    
+    return view('noticias.noticias');
+
+});
 

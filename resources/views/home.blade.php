@@ -19,20 +19,34 @@
               <a class="nav-link active" data-toggle="collapse" href="#collapseGrupos" aria-expanded="false" aria-controls="collapseGrupos">Meus Grupos</a>
                <div class="collapse" id="collapseGrupos">
                   <div class="">
-                    <ul class="list-group">
-                        @foreach(Auth::user()->grupos as $grupo)  
+                        <div class="mb-2 ml-5 mr-5">
+                         <a href="{{url('/grupos/create')}}" class="active list-group-item list-group-item-action flex-column align-items-start pr-5 pl-5">
+                                <div class="d-flex w-100 justify-content-between">
+                                <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                                  <span class="mb-1 pt-1">Novo Grupo</span>
+                                  
+                                </div>
+                            
+                              </a>
+                        
+                        
+                        </div>
+                     
+                        @foreach(Auth::user()->grupos as $grupo)
+                          
                               <a href="/espelho/{{$grupo->id}}" class="list-group-item list-group-item-action flex-column align-items-start">
                                 <div class="d-flex w-100 justify-content-between">
                                   <h5 class="mb-1">{{$grupo->nome}}</h5>
                                   <small class="text-muted">{{$grupo->created_at}}</small>
                                 </div>
                                 <p class="mb-1">{{$grupo->descricao}}</p>
-                                <small class="text-muted">Donec id elit non mi porta.</small>
+                                <small class="text-muted">Universidade Federal de Alagoas.</small>
                               </a>
+                             
                         @endforeach
                       
                       
-                    </ul>
+                    
                   </div>
                </div>
               <a class="nav-link active" data-toggle="collapse" href="#collapseProjetos" aria-expanded="false" aria-controls="collapseProjetos">Meus Projetos</a>
@@ -51,13 +65,12 @@
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-8">
         <div class="p-2">
-          <div class="card card-block">
-              <h3><i class="fa fa-tablet" aria-hidden="true"></i>  Aqui ficará a timeline</h3>
-              <hr class="item-divider">
-          </div>
-          
+                   
             <div class="list-group">
-                <a href="#" class="mb-2 list-group-item list-group-item-action flex-column align-items-start active">
+
+            <div class="mt-2">
+              <span>Novidades nos seus grupos</span>
+                <a href="#" class="mb-2 list-group-item list-group-item-action flex-column align-items-start">
                   <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">List group item heading</h5>
                     <small>3 days ago</small>
@@ -65,25 +78,25 @@
                   <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
                   <small>Donec id elit non mi porta.</small>
                 </a>
+                <hr class="item-divider">
+            </div>
 
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">List group item heading</h5>
-                    <small class="text-muted">3 days ago</small>
-                  </div>
-                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                  <small class="text-muted">Donec id elit non mi porta.</small>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">List group item heading</h5>
-                    <small class="text-muted">3 days ago</small>
-                  </div>
-                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                  <small class="text-muted">Donec id elit non mi porta.</small>
-                </a>
-              </div>
+            <div class="mt-2">
+              <span>Novidades na rede</span>
+                
+                @foreach($novosGrupos as $novoGrupo)
+                  <a href="#" class="mb-2 list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">{{$novoGrupo->nome}}</h5>
+                      <small class="text-muted">{{$novoGrupo->created_at}}</small>
+                    </div>
+                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <small class="text-muted">Donec id elit non mi porta.</small>
+                  </a>
+                @endforeach
+                </div>{{-- mt-2   --}}
 
+              </div>{{--  List Group   --}}
             </div>{{-- fim do p-2   --}}
 
         </div>
