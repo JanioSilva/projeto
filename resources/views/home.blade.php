@@ -16,7 +16,7 @@
           <hr class="item-divider">
           <div>
             <nav class="navbar-nav flex-column">
-              <a class="nav-link active" data-toggle="collapse" href="#collapseGrupos" aria-expanded="false" aria-controls="collapseGrupos">Meus Grupos</a>
+              <a class="btn btn-default nav-link active" data-toggle="collapse" href="#collapseGrupos" aria-expanded="false" aria-controls="collapseGrupos">Meus Grupos</a>
                <div class="collapse" id="collapseGrupos">
                   <div class="">
                         <div class="mb-2">
@@ -27,10 +27,10 @@
                                   
                                 </div>
                             
-                              </a>
+                          </a>
                         
                         
-                        </div>
+                       </div>
                      
                         @foreach(Auth::user()->grupos as $grupo)
                           <div class="card card-body">
@@ -49,15 +49,18 @@
                     
                   </div>
                </div>
-              <a class="nav-link active" data-toggle="collapse" href="#collapseProjetos" aria-expanded="false" aria-controls="collapseProjetos">Meus Projetos</a>
+              <a class="btn btn-default nav-link active" data-toggle="collapse" href="#collapseProjetos" aria-expanded="false" aria-controls="collapseProjetos">Meus Projetos</a>
                <div class="collapse" id="collapseProjetos">
-                  <div class="card card-block">
-                    <ul>
-                      <li>Grupo 1</li>
-                      <li>Grupo 2</li>
-                      <li>Grupo 3</li>
-                    </ul>
-                  </div>
+                  <div class="card card-body">
+                              <a href="/espelho/{{$grupo->id}}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                  <h5 class="mb-1">Projeto Nome</h5>
+                                  <small class="text-muted">Criado em</small>
+                                </div>
+                                <p class="mb-1">Descricao do Projeto</p>
+                                <small class="text-muted">Universidade Federal de Alagoas.</small>
+                              </a>
+                    </div>
                </div>
             </nav>
           </div>

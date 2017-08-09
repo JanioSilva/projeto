@@ -8,7 +8,7 @@
       <div class="row">
     @foreach($grupos as $grupo)
         <div class="col-lg-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="rounded-circle chip" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
           <h2>{{$grupo->sigla}}</h2>
           <h4>{{$grupo->nome}}</h4>
           <p>{{$grupo->descricao}}</p>
