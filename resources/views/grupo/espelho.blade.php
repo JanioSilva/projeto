@@ -9,7 +9,7 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="rounded-circle chip" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
           <h2 >{{$grupo->sigla}}</h2>
           
           <p>{{$grupo->descricao}}</p>
@@ -19,7 +19,7 @@
 
             <div>
             <nav class="nav flex-column">
-              <a class="nav-link active" data-toggle="collapse" href="#collapseGrupos" aria-expanded="false" aria-controls="collapseGrupos">Projetos do {{$grupo->sigla}}</a>
+              <a class="btn btn-default nav-link active" data-toggle="collapse" href="#collapseGrupos" aria-expanded="false" aria-controls="collapseGrupos">Projetos do {{$grupo->sigla}}</a>
                <div class="collapse" id="collapseGrupos">
                   <div>
                     <ul class="list-group">
@@ -29,13 +29,13 @@
                     </ul>
                   </div>
                </div>
-              <a class="nav-link active" data-toggle="collapse" href="#collapseProjetos" aria-expanded="false" aria-controls="collapseProjetos">Pesquisadores do Grupo</a>
+              <a class="btn btn-default nav-link active" data-toggle="collapse" href="#collapseProjetos" aria-expanded="false" aria-controls="collapseGrupos">Pesquisadores do Grupo</a>
                <div class="collapse" id="collapseProjetos">
                   <div>
                     <ul class="list-group">
-                      <li class="list-group-item">Pesquisador 1</li>
-                      <li class="list-group-item">Pesquisador 2</li>
-                      <li class="list-group-item">Pesquisador 3</li>
+                    @foreach($grupo->users as $grupo_user)
+                      <li class="list-group-item">{{$grupo_user->name}}</li>
+                    @endforeach
                     </ul>
                   </div>
                </div>
@@ -45,7 +45,7 @@
 
           
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-8">
+        <div class="col-lg-8 chip pt-4">
           <h2>{{$grupo->nome}}</h2>
           <hr class="item-divider">
           <strong>Área de Pesquisa:</strong> 
