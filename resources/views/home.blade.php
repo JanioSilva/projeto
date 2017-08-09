@@ -52,7 +52,7 @@
               <a class="btn btn-default nav-link active" data-toggle="collapse" href="#collapseProjetos" aria-expanded="false" aria-controls="collapseProjetos">Meus Projetos</a>
                <div class="collapse" id="collapseProjetos">
                   <div class="card card-body">
-                              <a href="/espelho/{{$grupo->id}}" class="list-group-item list-group-item-action flex-column align-items-start">
+                              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                                 <div class="d-flex w-100 justify-content-between">
                                   <h5 class="mb-1">Projeto Nome</h5>
                                   <small class="text-muted">Criado em</small>

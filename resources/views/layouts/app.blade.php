@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/css/style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/font-awesome/css/font-awesome.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/css/mdb.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/css/newstyle.css') }}">
+        
     </head>
     <body>
         
