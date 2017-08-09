@@ -22,8 +22,7 @@
       </div><!-- /.row -->
       <div class="row">
         {{ $grupos->links() }}
-
-      
+         
       </div>
 
 @endsection

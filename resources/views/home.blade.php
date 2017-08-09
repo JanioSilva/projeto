@@ -9,7 +9,7 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="rounded-circle" src="/img/{{Auth::user()->avatar}}" alt="Generic placeholder image" width="140" height="140">
+          <img class="rounded-circle chip" src="/img/{{Auth::user()->avatar}}" alt="Generic placeholder image" width="140" height="140">
           <h2 >{{Auth::user()->name}}</h2>
           <hr class="item-divider">
           <p>Universidade Federal de Alagoas</p>
@@ -20,9 +20,9 @@
                <div class="collapse" id="collapseGrupos">
                   <div class="">
                         <div class="mb-2">
-                         <a href="{{url('/grupos/create')}}" class=" w-50 h-25 active list-group-item list-group-item-action flex-column align-items-start">
+                         <a href="{{url('/grupos/create')}}" class=" btn btn-primary btn-sm">
                                 <div class="d-flex  justify-content-between">
-                                <i class="fa fa-plus fa-2x mr-1" aria-hidden="true"></i>
+                                <i class="fa fa-plus fa-2x mr-1 mt-1" aria-hidden="true"></i>
                                   <span class="mt-1 ml-1">Novo Grupo</span>
                                   
                                 </div>
@@ -33,7 +33,7 @@
                         </div>
                      
                         @foreach(Auth::user()->grupos as $grupo)
-                          
+                          <div class="card card-body">
                               <a href="/espelho/{{$grupo->id}}" class="list-group-item list-group-item-action flex-column align-items-start">
                                 <div class="d-flex w-100 justify-content-between">
                                   <h5 class="mb-1">{{$grupo->nome}}</h5>
@@ -42,7 +42,7 @@
                                 <p class="mb-1">{{$grupo->descricao}}</p>
                                 <small class="text-muted">Universidade Federal de Alagoas.</small>
                               </a>
-                             
+                          </div>
                         @endforeach
                       
                       
@@ -70,7 +70,7 @@
 
             <div class="mt-2">
               <span>Novidades nos seus grupos</span>
-                <a href="#" class="mb-2 list-group-item list-group-item-action flex-column align-items-start">
+                <a href="#" class="card card-body mb-2 list-group-item list-group-item-action flex-column align-items-start">
                   <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">List group item heading</h5>
                     <small>3 days ago</small>
@@ -85,7 +85,7 @@
               <span>Novidades na rede</span>
                 
                 @foreach($novosGrupos as $novoGrupo)
-                  <a href="#" class="mb-2 list-group-item list-group-item-action flex-column align-items-start">
+                  <a href="#" class="card card-body mb-2 list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-between">
                       <h5 class="mb-1">{{$novoGrupo->nome}}</h5>
                       <small class="text-muted">{{$novoGrupo->created_at}}</small>
