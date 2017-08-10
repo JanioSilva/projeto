@@ -32,9 +32,8 @@ Route::get('/pesquisadores', 'UserController@index')->name('pesquisadores');
 
 
 // Roda do Dashboad do projeto
-Route::get('/projeto', function () {
-    return view('projeto.dashboard');
-});
+//Route::get('/projeto/{id}', 'ProjetoController@show');
+Route::get('/projeto/create', 'ProjetoController@create')->name('create_projeto');
 
 
 // Roda dos grupos CRUD

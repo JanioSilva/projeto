@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\User;
+use App\Projeto;
 
 class Grupo extends Model
 {
@@ -29,6 +30,11 @@ class Grupo extends Model
 
         return $this->belongsToMany(User::class);
         
+    }
+
+    public function projetos(){
+     
+        return $this->hasMany(Projeto::class);
     }
 
 }

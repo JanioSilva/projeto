@@ -15,6 +15,12 @@ class CreateProjetosTable extends Migration
     {
         Schema::create('projetos', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('grupo_id')->unsigned();
+            $table->foreign('grupo_id')->references('id')->on('grupos')->onDelete('cascade');
+            $table->string('nome');
+            $table->text('descricao');
+            $table->text('area');
+            $table->integer('data_formacao');
             $table->timestamps();
         });
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Projeto;
 
 class ProjetoController extends Controller
 {
@@ -23,7 +24,7 @@ class ProjetoController extends Controller
      */
     public function create()
     {
-        //
+       return view('projeto.create_projeto');
     }
 
     /**
@@ -45,7 +46,9 @@ class ProjetoController extends Controller
      */
     public function show($id)
     {
-        //
+        $projeto = Projeto::find($id);
+
+        return view('projeto.dashboard')->with('projeto', $projeto);
     }
 
     /**
