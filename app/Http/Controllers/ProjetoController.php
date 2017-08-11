@@ -38,7 +38,12 @@ class ProjetoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $grupo = Projeto::create($data);
+          
+
+        return back()->with(['success' => 'Projeto Cadastrado com sucesso!']);
     }
 
     /**

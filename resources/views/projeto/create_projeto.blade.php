@@ -16,21 +16,16 @@
                      <p class="alert-success"> {{session('success')}} </p>
                   @endif
 
+                  <input name ="grupo_id" type="hidden" value="{{$grupo->id}}">
 
                   <input name="nome" class="form-control" type="text" placeholder="Nome do Projeto">
               
-                <hr class="item-divider">
-              
                   <textarea name="descricao" id="" cols="1" rows="3" class="form-control mt-4" placeholder="Descrição do Projeto"></textarea>
             
-                <div class="form-group">
-                  <strong>Área de Pesquisa:</strong>
-                  <input name="area" type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                 <strong>Ano de Formação:</strong>
-                  <input name="data_formacao" type="text "class="form-control" placeholder="1970">
-                </div>
+                  <input name="area" type="text" class="form-control" placeholder="Area de Pesquisa">
+                
+                  <input name="data_formacao" type="text "class="form-control" placeholder="Data de Formação">
+
                 <div class="mt-5">
                   <input class="btn btn-primary" type="submit" value="Salvar">
                 </div>

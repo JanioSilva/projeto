@@ -23,10 +23,10 @@
                <div class="collapse" id="collapseGrupos">
                   <div>
                     <ul class="list-group">
-                            <a href="/projeto/{{$grupo->id}}/create" class="btn btn-primary">Add Projeto</a>
-                      <li class="list-group-item">Projeto 1</li>
-                      <li class="list-group-item">Projeto 2</li>
-                      <li class="list-group-item">Projeto 3</li>
+                    <a href="/projeto/{{$grupo->id}}/create" class="btn btn-primary">Add Projeto</a>
+                      @foreach($grupo->projetos as $projeto)
+                      <li class="list-group-item">{{$projeto->nome}}</li>
+                      @endforeach
                     </ul>
                   </div>
                </div>

@@ -12,7 +12,7 @@ class Projeto extends Model
      * @var array
      */
     protected $fillable = [
-        'nome', 'descricao','area','data_formacao'
+        'nome', 'descricao', 'grupo_id' ,'area','data_formacao'
     ];
 
     /**
