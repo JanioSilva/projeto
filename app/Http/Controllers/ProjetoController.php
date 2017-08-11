@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Projeto;
+use App\Grupo;
 
 class ProjetoController extends Controller
 {
@@ -22,9 +23,11 @@ class ProjetoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-       return view('projeto.create_projeto');
+        $grupo = Grupo::find($id);
+
+       return view('projeto.create_projeto')->with('grupo', $grupo);
     }
 
     /**
