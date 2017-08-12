@@ -8,7 +8,7 @@
       <div class="row">
     @foreach($grupos as $grupo)
         <div class="col-lg-4">
-          <div class="chip pl-1 pr-1 pb-1 pt-2">
+          
             <img class="rounded-circle chip" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
             <h2>{{$grupo->sigla}}</h2>
             <h4>{{$grupo->nome}}</h4>
@@ -17,7 +17,7 @@
             <p>Universidade Federal de Alagoas</p>
             <hr class="item-divider">
             <p><a class="btn btn-secondary" href="/espelho/{{$grupo->id}}" role="button">Ver Detalhes &raquo;</a></p>
-          </div>
+          
         </div><!-- /.col-lg-4 -->
     @endforeach
 

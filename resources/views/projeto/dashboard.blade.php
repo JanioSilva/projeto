@@ -4,7 +4,7 @@
 
 <div class="container mt-5">
             
-       <h1>Olaaaa</h1>
+       <h1>Dashboard do {{$projeto->nome}}</h1>
             
 </div>
 
