@@ -19,18 +19,9 @@
               <a class="btn btn-default nav-link active" data-toggle="collapse" href="#collapseGrupos" aria-expanded="false" aria-controls="collapseGrupos">Meus Grupos</a>
                <div class="collapse" id="collapseGrupos">
                   <div class="">
-                        <div class="mb-2">
-                         <a href="{{url('/grupos/create')}}" class=" btn btn-primary btn-sm">
-                                <div class="d-flex  justify-content-between">
-                                <i class="fa fa-plus fa-2x mr-1 mt-1" aria-hidden="true"></i>
-                                  <span class="mt-1 ml-1">Novo Grupo</span>
-                                  
-                                </div>
-                            
-                          </a>
+                        <ul class="list-group">
+                         <a href="{{url('/grupos/create')}}" class=" btn btn-primary">Novo Grupo</a>
                         
-                        
-                       </div>
                      
                         @foreach(Auth::user()->grupos as $grupo)
                           <div class="card card-body">
@@ -45,7 +36,7 @@
                           </div>
                         @endforeach
                       
-                      
+                      </ul>
                     
                   </div>
                </div>
