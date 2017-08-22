@@ -23,7 +23,10 @@
                <div class="collapse" id="collapseGrupos">
                   <div>
                     <ul class="list-group">
+                    @if(Auth::check())
                     <a href="/projeto/{{$grupo->id}}/create" class="btn btn-primary">Add Projeto</a>
+                    @endif
+                    
                       @foreach($grupo->projetos as $projeto)
                           <div class="card card-body">
                               <a href="/projeto/{{$projeto->id}}" class="list-group-item list-group-item-action flex-column align-items-start">
